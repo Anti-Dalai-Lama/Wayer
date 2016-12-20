@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     private static SensorManager sm;
     private Sensor sensor;
-    private Sensor sensorMagnetic;
 
     private float curDegree = 0f;
 
@@ -56,8 +55,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        if(sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD && accuracy == SensorManager.SENSOR_STATUS_UNRELIABLE){
-            Toast.makeText(this, "SHIT", Toast.LENGTH_LONG);
-        }
+
     }
 }
